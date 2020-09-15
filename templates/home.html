@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Hello {{name}}!!! </h1>
+
+<form action="add" method='post'>
+
+{% csrf_token %}
+    Investment per year            : <input type="text" name="investment"><br>
+    No of years you plan to invest : <input type="text" name="year"><br>
+    Expected average yearly return : <input type="text" name="r"><br>
+    Expected avg yearly inflation  : <input type="text" name="i"><br>
+    <input type="submit">
+
+{% endblock %}
